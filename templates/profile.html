@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD begins -->
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- If IE use latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsive: set the page width to device width -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>BarterIt Home</title>
+
+    <!-- compiled and minified Bootstrap CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <style>
+        .jumbotron {
+            background-color: #1E90FF;
+            color: white;
+        }
+
+        .margin-bottom {
+            margin-bottom: 10px;
+        }
+
+        .margin-bottom-lg {
+            margin-bottom: 20px;
+        }
+
+        .instruct {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .black {
+            color: black;
+        }
+    </style>
+
+</head>
+<!-- HEAD ends -->
+
+
+<!-- BODY begins -->
+
+<body>
+
+    <div class="container">
+
+        <!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
+        <div class="page-header">
+            <h1>BarterIt</h1>
+        </div>
+
+        <a href="/" class="btn btn-info btn-lg margin-bottom">..</a><br>
+
+        <div class="jumbotron">
+            <h3>Barterer's home</h3>
+            <br>
+
+
+            <!-- Manage Bundles -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-danger btn-lg" href="/private/{{username}}/{{password}}">Private Bundles</a>
+                    <br>
+                    <p class="instruct">
+                        Manage everything about your private bundles here.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-warning btn-lg" href="/public/{{username}}/{{password}}">Public Bundles</a><br>
+                    <p class="instruct">
+                        Manage everything about your public bundles here.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-success btn-lg" href="/offered/{{username}}/{{password}}">Offered Bundles</a><br>
+                    <p class="instruct">
+                        Manage everything about the bundles you've offered to someone.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-primary btn-lg" href="/exchanged/{{username}}/{{password}}">Exchange History</a>
+                    <br>
+                    <p class="instruct">
+                        View your exchange history, rate and make comments about your exchanges.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="jumbotron jumbo-1">
+
+            <!-- Manage zipcode, wanted items -->
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-info btn-sm" href="/lives_in/{{username}}/{{password}}">ZIP codes</a><br>
+                    <p class="instruct">
+                        Update your ZIP codes here. You may have multiple ZIP codes.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a class="btn-info btn-sm" href="/wants/{{username}}/{{password}}">Wanted categories</a><br>
+                    <p class="instruct">
+                        Tell us what you want so that we can make better recommendations for you!
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <form action="/username/{{username}}/{{password}}">
+                        <input class="margin-bottom black" name="username" value="{{username}}">
+                        <input class="btn-info btn-sm" type="submit" value="Update username">
+                    </form>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <form action="/password/{{username}}/{{password}}">
+                        <input class="margin-bottom black" name="password" value="{{password}}">
+                        <input class="btn-info btn-sm" type="submit" value="Update password">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- script for Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+<!-- BODY ends -->
+
+</html>
