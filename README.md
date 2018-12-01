@@ -5,3 +5,6 @@ With the widespread usage of the internet for many tasks, e-commerce has become 
 
 BarterIt is a web application for an online C2C intra-neighborhood barter economy in which every deal is an exchange of bundles of items (money is not involved).
 
+The site can be accessed here: http://35.227.66.161:8008/
+
+
